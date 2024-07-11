@@ -1,0 +1,1 @@
+This is an alx project on AirBnb clone-Deploy static
