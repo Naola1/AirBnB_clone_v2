@@ -29,7 +29,7 @@ def c_is_fun(text):
 
 @app.route('/python/<text>')
 @app.route('/python')
-def python_is_cool(text='cool'):
+def python_is_cool(text='is cool'):
     """Return reformatted text
     """
     return 'Python ' + text.replace('_', ' ')
