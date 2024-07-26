@@ -3,7 +3,6 @@
  and listens on 0.0.0.0, port 5000"""
 
 from flask import Flask
-
 app = Flask(__name__)
 
 
@@ -13,16 +12,17 @@ def hello():
     """
     return 'Hello HBNB!'
 
-@app.route("/hbnb",strict_slashes=False)
+@app.route('/hbnb')
 def hbnb():
     """display a string 'HBNB'"""
-    return "HBNB"
+    return 'HBNB'
 
-@app.route("/c/<text>")
+@app.route('/c/<text>')
 def c_test(text):
-    """display “C ” followed by the value of the text variable"""
+    """display C followed by the value of the text variable"""
     text=text.replace('_',' ')
     return f"C {text}"
 
-if __name__=="__main__":
+if __name__ == '__main__':
+    app.url_map.strict_slashes = False
     app.run(host='0.0.0.0', port=5000,debug=None)
