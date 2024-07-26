@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/python3
 """script that starts flask web application frame work
  and listens on 0.0.0.0, port 5000"""
 
