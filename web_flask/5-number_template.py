@@ -43,7 +43,7 @@ def is_n_integer(n=None):
 
 
 @app.route('/number_template/<int:n>')
-def tem_if_n(n=None):
+def tem_if_n(n):
     """ renders html if the parameter is an integer
     """
     return render_template('5-number.html', n=n)
