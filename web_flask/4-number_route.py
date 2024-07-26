@@ -5,11 +5,13 @@
 from flask import Flask
 app = Flask(__name__)
 
+
 @app.route('/')
 def hello_flask():
     """Return string 'Hello HBNB!'
     """
     return 'Hello HBNB!'
+
 
 @app.route('/hbnb')
 def hbnb():
@@ -17,11 +19,13 @@ def hbnb():
     """
     return 'HBNB'
 
+
 @app.route('/c/<text>')
 def c_is_fun(text):
     """Return reformatted text
     """
     return 'C ' + text.replace('_', ' ')
+
 
 @app.route('/python/<text>')
 @app.route('/python/')
@@ -29,6 +33,7 @@ def python_is_cool(text='is cool'):
     """Return reformatted text
     """
     return 'Python ' + text.replace('_', ' ')
+
 
 @app.route('/number/<int:n>')
 def is_n_integer(n=None):
