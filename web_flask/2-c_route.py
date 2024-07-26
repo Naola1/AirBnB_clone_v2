@@ -8,14 +8,17 @@ app = Flask(__name__)
 
 @app.route("/",strict_slashes=False)
 def hello():
+    """display a string 'Hello HBNB!'"""
     return "Hello HBNB!"
 
 @app.route("/hbnb",strict_slashes=False)
 def hbnb():
+    """display a string 'HBNB'"""
     return "HBNB"
 
 @app.route("/c/<text>")
 def c_test(text):
+    """display “C ” followed by the value of the text variable"""
     text=text.replace('_',' ')
     return f"C {text}"
 
